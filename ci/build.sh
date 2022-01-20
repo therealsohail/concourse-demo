@@ -3,4 +3,4 @@ pwd
 ls
 cd sources/
 npm i
-ls sources/
+ls
