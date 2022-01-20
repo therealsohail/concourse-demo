@@ -9,5 +9,5 @@ image_resource:
 inputs:
   - name: node-proj
 
-run:
-  path: node-proj/ci/build.sh
+# run:
+#   path: node-proj/ci/build.sh
