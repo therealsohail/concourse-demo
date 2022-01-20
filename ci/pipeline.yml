@@ -6,7 +6,7 @@ resources:
       branch: master
 
 jobs:
-  - name: Package
+  - name: package
     plan:
       - get: sources
         trigger: true
