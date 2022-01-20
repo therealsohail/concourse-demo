@@ -11,4 +11,12 @@ jobs:
       - get: node-repo
         trigger: true
       - task: build-code
-        file: node-repo/ci/build.yml
+        # file: node-repo/ci/build.yml
+        platform: linux
+        image_resource:
+          type: registry-image
+          source: { repository: node, tag: slim }
+        inputs:
+          - name: node-proj
+        run:
+          path: /ci/build.sh
