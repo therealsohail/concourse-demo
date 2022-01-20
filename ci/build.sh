@@ -2,4 +2,4 @@
 pwd
 ls
 npm i sources/
-# npm install
+ls sources/
