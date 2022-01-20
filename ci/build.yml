@@ -4,8 +4,7 @@ image_resource:
   type: registry-image
   source: { repository: node }
 
-inputs:
-  - name: node-proj
-
+# inputs:
+#   - name: node-proj
 run:
-  path: node-proj/ci/build.sh
+  path: ./build.sh
