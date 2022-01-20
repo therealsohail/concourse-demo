@@ -6,4 +6,4 @@ image_resource:
 inputs:
   - name: sources
 run:
-  path: sources/build.sh
+  path: sources/ci/build.sh
