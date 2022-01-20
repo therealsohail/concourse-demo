@@ -3,8 +3,7 @@ platform: linux
 image_resource:
   type: registry-image
   source: { repository: node }
-
-# inputs:
-#   - name: sources
+inputs:
+  - name: sources
 run:
   path: sources/ci/build.sh
