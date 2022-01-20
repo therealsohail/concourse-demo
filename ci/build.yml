@@ -6,8 +6,8 @@ image_resource:
     repository: node
     tag: slim
 
-inputs:
-  - name: node-proj
+# inputs:
+#   - name: node-proj
 
 # run:
 #   path: node-proj/ci/build.sh
