@@ -10,5 +10,8 @@ jobs:
     plan:
       - get: sources
         trigger: true
+      - task: install
+        file: sources/ci/build.yml
+
       - task: build-code
         file: sources/ci/build.yml
