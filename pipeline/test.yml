@@ -1,7 +1,6 @@
 platform: linux
-image: "docker:///node#4.2.3"
-#inputs:
-  #- name: install
-#    path: .
+image_resource:
+  type: registry-image
+  source: { repository: node }
 run:
   path: sources/pipeline/test.sh
