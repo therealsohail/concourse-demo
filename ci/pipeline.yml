@@ -16,7 +16,5 @@ jobs:
         image_resource:
           type: registry-image
           source: { repository: node, tag: slim }
-        inputs:
-          - name: node-proj
         run:
-          path: /ci/build.sh
+          path: node-proj/ci/build.sh
