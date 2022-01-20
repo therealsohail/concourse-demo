@@ -1,5 +1,5 @@
 resources:
-  - name: node-repo
+  - name: sources
     type: git
     source:
       uri: https://github.com/therealsohail/concourse-demo.git
@@ -8,13 +8,7 @@ resources:
 jobs:
   - name: Package
     plan:
-      - get: node-repo
+      - get: sources
         trigger: true
       - task: build-code
-        # file: node-repo/ci/build.yml
-        platform: linux
-        image_resource:
-          type: registry-image
-          source: { repository: node, tag: slim }
-        run:
-          path: node-proj/ci/build.sh
+        file: sources/ci/build.yml
