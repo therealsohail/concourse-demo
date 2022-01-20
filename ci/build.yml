@@ -1,25 +1,11 @@
 platform: linux
 
 image_resource:
-  type: docker-image
-  source:
-    repository: node
-    tag: slim
+  type: registry-image
+  source: { repository: node }
 
 inputs:
   - name: node-proj
 
 run:
-  path: /bin/sh
-  args:
-    - -c
-    - |
-      echo "Node Version: $(node --version)"
-      echo "NPM Version: $(npm --version)"
-      cd nodejs.org-git
-      npm install
-      npm test
-
-
-# run:
-#   path: node-proj/ci/build.sh
+  path: node-proj/ci/build.sh
