@@ -6,8 +6,20 @@ image_resource:
     repository: node
     tag: slim
 
-# inputs:
-#   - name: node-proj
+inputs:
+  - name: node-proj
+
+run:
+  path: /bin/sh
+  args:
+    - -c
+    - |
+      echo "Node Version: $(node --version)"
+      echo "NPM Version: $(npm --version)"
+      cd nodejs.org-git
+      npm install
+      npm test
+
 
 # run:
 #   path: node-proj/ci/build.sh
