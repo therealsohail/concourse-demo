@@ -1,0 +1,14 @@
+resources:
+  - name: node-repo
+    type: git
+    source:
+      uri: https://github.com/therealsohail/concourse-demo.git
+      branch: master
+
+jobs:
+  - name: Package
+    plan:
+      - get: node-repo
+        trigger: true
+        - task: build-code
+          file: node-repo/ci/build.yml

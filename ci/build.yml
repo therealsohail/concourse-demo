@@ -1,0 +1,10 @@
+platform: linux
+
+image_resources:
+  type: docker-image
+  source: {repository: node, tag: alpine}
+
+inputs:
+  - name: node-proj
+
+run: node-proj/ci/build.sh
