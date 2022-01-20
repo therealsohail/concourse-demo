@@ -1,2 +1,4 @@
 #!/bin/sh
-npm install
+pwd
+ls
+# npm install
