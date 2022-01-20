@@ -10,5 +10,5 @@ jobs:
     plan:
       - get: node-repo
         trigger: true
-        - task: build-code
-          file: node-repo/ci/build.yml
+      - task: build-code
+        file: node-repo/ci/build.yml
