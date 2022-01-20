@@ -1,5 +1,6 @@
 #!/bin/sh
 pwd
 ls
-npm i sources/
+cd sources/
+npm i
 ls sources/
